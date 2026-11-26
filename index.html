@@ -134,7 +134,7 @@ body{height:100vh;height:100dvh;min-height:100vh;min-height:100dvh;display:flex;
  let offset=0,dir=1,lastFrame=0;
  function clock(){
    const d=new Date();
-   const t=d.toLocaleTimeString([], {hour12:true});
+   const t=d.toLocaleTimeString([], {hour12:true, hour:'numeric', minute:'2-digit', second:'2-digit'});
    const day=String(d.getDate()).padStart(2,'0'),month=String(d.getMonth()+1).padStart(2,'0'),year=String(d.getFullYear()).slice(-2);
    time.textContent=`${t} ${day}/${month}/${year}`;
  }
